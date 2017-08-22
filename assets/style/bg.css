@@ -5,3 +5,11 @@ html, body{
      background-repeat: no-repeat;
      background-size: cover;
 }
+
+#time{
+	text-align: center;
+	font-size: 50px;
+	font-family: Abel;
+	opacity: 0.5;
+	text-shadow: 5px 3px white;
+}
