@@ -12,7 +12,7 @@ $(document).ready(function() {
 });
 
 function getWeather(lat, lon) {
-  api = "https://fcc-weather-api.glitch.me/api/current?";
+  var api = "https://fcc-weather-api.glitch.me/api/current?";
   var url = api + lat + "&" + lon;
   $.ajax({
     url: url, success: function (result) {

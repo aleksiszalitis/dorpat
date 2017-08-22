@@ -1,0 +1,9 @@
+#bottom{
+  position: fixed;
+  top: 80%;
+  left: 40%;
+  width: 30em;
+  height: 18em;
+  color: white;
+  font-size: 20px;
+}
