@@ -9,7 +9,7 @@ html, body{
 #time{
 	text-align: center;
 	font-size: 50px;
-	font-family: Abel;
+	font-family: 'Abel';
 	opacity: 0.7;
 	text-shadow: 1px 3px white;
 }
