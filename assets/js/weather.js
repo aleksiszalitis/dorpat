@@ -19,7 +19,8 @@ function getWeather(lat, lon) {
       $("#city").text(result.name);
       $("#country").text(result.sys.country);
       $("#temp").text(result.main.temp);
-      $("#icon").html("<img src="+result.weather[0].icon+" />");
+      $("#icon").html("<i class=\"owf owf-"+result.weather[0].id+" owf-2x\" />");
+      console.log(result)
     }
   });
 }

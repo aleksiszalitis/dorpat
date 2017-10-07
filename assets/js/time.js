@@ -9,6 +9,7 @@ function updateClock() {
   minutes = addZero(time.getMinutes());
   seconds = addZero(time.getSeconds());
   $("#time").text(hours+":"+minutes);
+  $(".day").text(["Sun","Mon","Tues","Wednes","Thurs","Fri","Satur"][time.getDay()]+"day");
   setTimeout(updateClock,1000);
 }
 updateClock();

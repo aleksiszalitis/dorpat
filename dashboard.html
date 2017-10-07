@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="assets/style/time.css">
     <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/style/bg.css">
-    <link rel="stylesheet" type="text/css" href="assets/style/bottom.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="assets/owfont/css/owfont-regular.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/style/bootstrap.min.css">
+
   </head>
-  <body>
-    <div id="weather"></div>
-    <p>
-      <span id="city"></span>
-      <span id="country"></span>
-      <span id="temp"></span>
-      <span id="icon"></span>
-    </p>
-    <p>
-      <div id="centertime">
-        <span id="time"></span>
+  <body> 
+
+  <div id="header">
+      <div class ="container">
+        <div class = "row">
+          <div class = "col col-xs-9" id="time"></div>
+          <div class = "col col-xs-3" id="weather">
+            <span id="city"></span>
+            <span id="country"></span>
+            <span id="temp"></span>
+            <span id="icon"></span>
+          </div>
+        </div>
       </div>
-      <div id="bottom">
-        <span id="quote"/>
-      </div>
-    </p>
-    <script src="assets/js/weather.js"></script>
-    <script src="assets/js/time.js"></script>
-    <script src="assets/js/background.js"></script>
-    <script src="assets/js/quote.js"></script>
+      <span class="day"></span>
+  </div> 
+  <div id="bottom">
+      <span id="quote"/>
+  </div>
+
+<script src="assets/js/weather.js"></script>
+<script src="assets/js/time.js"></script>
+<script src="assets/js/background.js"></script>
+<script src="assets/js/quote.js"></script>
+
   </body>
 </html>
