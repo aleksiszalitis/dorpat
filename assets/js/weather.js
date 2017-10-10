@@ -16,10 +16,14 @@ function getWeather(lat, lon) {
   var url = api + lat + "&" + lon;
   $.ajax({
     url: url, success: function (result) {
-      $("#city").text(result.name);
-      $("#country").text(result.sys.country);
-      $("#temp").text(result.main.temp);
-      $("#icon").html("<i class=\"owf owf-"+result.weather[0].id+" owf-2x\" />");
+      $(".city").text(result.name);
+      $(".country").text(result.sys.country);
+      $(".temp").text(result.main.temp+"\u2103");
+      // symbol: U+00B0: °
+      // celsius: U+2103 ℃
+      // fahrenheit: U+2109 ℉
+      // kelvin: U+212A K
+      $(".icon").html("<i class=\"owf owf-"+result.weather[0].id+" owf-2x\" />");
       console.log(result)
     }
   });
