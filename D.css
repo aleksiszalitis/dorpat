@@ -1,0 +1,216 @@
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  overflow: hidden;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: url(02.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+}
+header{ 
+  position: absolute;
+	width: 100%;
+  height: 150px;
+  transition: all 0.6s ease-in-out;    
+  overflow: hidden;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, .2);
+}
+header:hover{
+  background-color: rgba(0,0,0, .4);
+}
+header::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url(02.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  transition: all .6s ease-in-out;
+  filter: blur(3px);
+}
+header:hover::before{
+  filter: blur(8px);
+}/*
+header:hover > .time,header:hover > .day,header:hover > .city,header:hover > .temp,header:hover > .icon > i{
+text-shadow: 0px 0px 0px rgba(0, 0, 0, .3);
+transition: all .6s ease-in-out;
+}*/
+.time, .day, .city, .icon, .temp, i{
+  position: absolute;
+  background: url(02.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom:0;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 35px;
+  width: 100%;
+  height: 100%;
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, .0);
+  transition: all .6s ease-in-out;
+}
+.time {
+  padding-top: 30px;
+  padding-right: 60%;
+  font-size: 135px;
+  text-align: end;
+}
+
+.day {
+  padding-left: 40%;
+  padding-top: 116px;
+}
+.temp {
+  padding-left: 40%;
+  padding-top: 64px;
+}
+.city {
+  padding-left: 40%;
+  padding-top: 90px;
+}
+.icon {
+  padding-top: 30px;
+  padding-left: 40%;
+  font-size: 45px;
+  text-align: end;
+}
+
+footer{
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+	width: 100%;
+  height: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+main{
+  top: 150px;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+}
+.kast{
+  -webkit-font-smoothing: antialiased;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 25px 10px;
+  top: 50%;
+  left: 50%;
+  height: 120px;
+  width: 170px;
+  transition: all 0.6s ease-in-out;
+  font-size: 35px;
+  font-weight: bold;
+  background-color:rgba(0, 0, 0, .2);
+}
+.kast:hover{
+  background-color: rgba(255, 255, 255, .4);
+}
+.logo:hover{
+  transition: all 0.6s ease-in-out;
+  transform: scale(1.1);
+  color: #c4302b;
+  fill: #c4302b;
+  /*
+  background-color: #c4302b;*/
+  -webkit-text-fill-color: #c4302b;
+  -webkit-background-clip: text;
+}
+.logo1{
+  text-align: center;
+  top:50%;
+}
+.facebook{
+  -webkit-font-smoothing: antialiased;
+}
+.facebook:hover { 
+  color: #3b5998; 
+}
+
+.google{
+  content: icon '\uf1a0';
+}
+.google:hover { 
+  color: #f4c20d; 
+}
+
+.youtube{
+  -webkit-font-smoothing: antialiased;
+  font-family: 'font awesome';
+}
+
+.youtube::before{
+  font-family: Font Awesome\ 5 Brands;
+  content: "\f167";}
+
+.youtube:hover { 
+  color: #c4302b; 
+}
+
+.spotify{
+  -webkit-font-smoothing: antialiased;
+}
+.spotify:hover { 
+  color: #1db954; 
+}/*
+.youtube:hover{
+  transition: all 0.6s ease-in-out;
+  transform: scale(1.1);
+  width: 100px;
+  height: 100px;
+  -webkit-mask: url(assets/fonts/youtube.svg)no-repeat;
+  fill: #c4302b;
+}*/
+.logo {
+  transition: all 0.6s ease-in-out;
+  display: inline-block;
+  font-size: 3em;
+  /*
+  text-indent: -9999px;
+  width: 100px;
+  height: 82px;  
+  background-size: 100px 82px;
+  */
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.newsletter-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-position: center;
+  -webkit-filter: blur(7px);
+}
+.newsletter-text {
+  position: relative;
+}
+.haba, #time {
+  color: rgba(0, 0, 0, 0);
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0px 1.5px 0px rgba(255, 255, 255, 0.9), 0px -1.5px 0.5px rgba(0, 0, 0, 0.7);
+}

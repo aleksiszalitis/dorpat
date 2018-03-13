@@ -1,0 +1,355 @@
+@mixin bg-set() {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+section{
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.blur-container{
+  @include bg-set();
+  
+  &::before, &::after{
+    top: 0px;
+    left: 0px;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+  }
+
+  .container-fluid{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+
+  .blur-box{
+    display: block;
+    position: relative;
+
+    &::before, &::after{
+      top: 0px;
+      left: 0px;
+      content: '';
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+    }
+  }
+
+  &.blur-1{
+    --bg: url(https://images.pexels.com/photos/208701/pexels-photo-208701.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+
+    color: #444;
+    padding: 0px 20px;
+    background-image: var(--bg);
+
+    .blur-box{
+      width: 100%;
+      height: 300px;
+      max-width: 600px;
+
+      h2{
+        font-size: 40px;
+      }
+
+      p{
+        font-size: 25.4px;
+      }
+
+      &::before{
+        z-index: 10;
+        opacity: 0.5;
+        filter: blur(8px);
+        background-color: #fff;
+      }
+
+      &::after{
+        @include bg-set();
+        filter: blur(8px);
+        background-image: var(--bg);
+      }
+    }
+  }
+
+  &.blur-2{
+    --bg: url(https://images.pexels.com/photos/269923/pexels-photo-269923.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+
+    background-image: var(--bg);
+
+    .blur-box{
+      color: #ddd;
+      width: 100%;
+      height: 100%;
+      max-width: 400px;
+      overflow: hidden;
+
+      h2{
+        font-size: 37px;
+      }
+
+      &::before{
+        z-index: 10;
+        opacity: 0.5;
+        background-color: #666;
+      }
+
+      &::after{
+        @include bg-set();
+        filter: blur(10px);
+        background-image: var(--bg);
+      }
+    }
+  }
+
+  &.blur-3{
+    --bg: url('https://2.bp.blogspot.com/-lVUStmbfBlk/UkPjrvsS7eI/AAAAAAAAOi0/-M2LqsBNQv0/s1600/iphone_5_wallpaper+(2).png');
+
+    background-image: var(--bg);
+
+    .blur-box{
+      color: #31405e;
+      width: 100%;
+      height: 100%;
+      max-height: 300px;
+      overflow: hidden;
+
+      h2{
+        font-size: 37px;
+      }
+
+      &::before{
+        z-index: 10;
+        opacity: 0.5;
+        background-color: #fff;
+      }
+
+      &::after{
+        @include bg-set();
+        filter: blur(15px) brightness(110%);
+        background-image: var(--bg);
+      }
+    }
+  }
+
+  &.blur-4{
+    --bg: url(http://cdn.mos.cms.futurecdn.net/9b6414c04c7305133fa9346d447eef9d-1200-80.jpg);
+
+    background-image: var(--bg);
+
+    .blur-box{
+      color: #31405e;
+      width: 100%;
+      height: 300px;
+      max-width: 500px;
+      overflow: hidden;
+      border-radius: 10px;
+
+      h2{
+        font-size: 37px;
+      }
+
+      &::before{
+        z-index: 10;
+        opacity: 0.3;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      &::after{
+        @include bg-set();
+        border-radius: 10px;
+        filter: blur(15px) brightness(140%);
+        background-image: var(--bg);
+      }
+    }
+  }
+
+  &.blur-5{
+    --bg: url(https://images.pexels.com/photos/24344/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb);
+
+    background-image: var(--bg);
+
+    .blur-box{
+      color: #fff;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+
+      .btn{
+        color: #fff;
+        transition: 0s;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        padding: 10px 40px;
+        border: 2px solid #fff;
+
+        span{
+          position: relative;
+          z-index: 10;
+        }
+
+        &::before, &::after{
+          content: '';
+          top: 0px;
+          left: 0px;
+          width: 100%;
+          height: 100%;
+          display: block;
+          transition: 0.3s;
+          position: absolute;
+        }
+
+        &:hover{
+
+          &::before{
+            opacity: 0.2;
+            background-color: #999;
+          }
+
+          &::after{
+            filter: blur(4px) brightness(120%);
+          }
+        }
+
+        &::before{
+          z-index: 10;
+          opacity: 0.4;
+          background-color: #333;
+        }
+
+        &::after{
+          @include bg-set();
+          background-image: var(--bg);
+          filter: blur(4px) brightness(70%);
+        }
+      }
+
+      &::before{
+        z-index: 10;
+        opacity: 0.4;
+        background-color: #333;
+      }
+
+      &::after{
+        @include bg-set();
+        background-image: var(--bg);
+        filter: blur(4px) brightness(70%);
+      }
+    }
+  }
+
+  &.blur-6{
+    --bg: url(https://images.pexels.com/photos/621/nature-field-summer-agriculture.jpg?w=940&h=650&auto=compress&cs=tinysrgb);
+
+    background-image: var(--bg);
+
+    .row{
+      width: 100%;
+    }
+
+    .blur-box{
+      color: #fff;
+      width: 100%;
+      height: 300px;
+
+      &.bg-light{
+
+        &::before{
+          z-index: 10;
+          opacity: 0.4;
+          filter: blur(4px);
+          background-color: #fff;
+        }
+
+        &::after{
+          @include bg-set();
+          background-image: var(--bg);
+          filter: blur(4px) brightness(120%);
+        }
+      }
+
+      &.bg-normal{
+
+        &::after{
+          @include bg-set();
+          filter: blur(4px);
+          background-image: var(--bg);
+        }
+      }
+
+      &.bg-dark{
+
+        &::before{
+          z-index: 10;
+          opacity: 0.4;
+          filter: blur(4px);
+          background-color: #333;
+        }
+
+        &::after{
+          @include bg-set();
+          background-image: var(--bg);
+          filter: blur(4px) brightness(70%);
+        }
+      }
+    }
+  }
+
+  &.blur-7{
+    --bg: url(https://images.pexels.com/photos/4173/nature-forest-plant-tropic.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+
+    background-image: var(--bg);
+
+    .blur-box{
+      color: #fff;
+      width: 100%;
+      height: 90%;
+      max-width: 600px;
+      max-height: 400px;
+
+      &::after{
+        @include bg-set();
+        opacity: 0.9;
+        background-image: var(--bg);
+        filter: blur(6px) brightness(100%);
+      }
+    }
+  }
+
+  &.blur-8{
+    --bg: url(https://images.pexels.com/photos/26178/pexels-photo-26178.jpg?w=940&h=650&auto=compress&cs=tinysrgb);
+
+    overflow: hidden;
+    background-image: var(--bg);
+
+    &::after{
+      @include bg-set();
+      opacity: 0.8;
+      filter: blur(6px);
+      background-image: var(--bg);
+    }
+
+    .blur-box{
+      @include bg-set();
+      color: #fff;
+      width: 100%;
+      height: 90%;
+      z-index: 11;
+      max-width: 600px;
+      max-height: 400px;
+      border-radius: 10px;
+      background-image: var(--bg);
+      box-shadow: 0px 0px 30px #333;
+    }
+  }
+}

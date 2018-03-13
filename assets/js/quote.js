@@ -7,8 +7,8 @@ function getQuote() {
   $.getJSON({
     url: url, success: function(result){
       $("#quote").text(result.quote.body);
+      $(".quote_a").text(result.quote.author);
     }
   });
 }
-
 getQuote();

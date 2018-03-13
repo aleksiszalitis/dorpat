@@ -24,7 +24,7 @@ function getWeather(lat, lon) {
       // fahrenheit: U+2109 ℉
       // kelvin: U+212A K
       $(".icon").html("<i class=\"owf owf-"+result.weather[0].id+" owf-2x\" />");
-      console.log(result)
+      console.log(result, url)
     }
   });
 }

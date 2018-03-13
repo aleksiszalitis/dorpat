@@ -1,45 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/style/bg.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="assets/owfont/css/owfont-regular.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="assets/style/bootstrap.min.css">
+<head>
+  <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/style/bg.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="assets/owfont/css/owfont-regular.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="assets/style/bootstrap-grid.min.css">
 
-  </head>
-  <body> 
-
-  <div id="header">
+</head>
+<body> 
+  <!---<body class="preload">-->
+  <div class="sqr background">
+<header>
       <div class ="container">
         <div class = "row">
           <div class = "col col-xs-3"></div>
-          <div class = "col col-xs-6" id="time"></div>
-          <div class = "col col-xs-3" id="weather">
-            <div class = "row">
-              <span class="temp"></span>
-              <div><span class="icon"></span></div>
-            </div>
+          <div class = "col col-xs-6"><div class = "time"></div></div>
+        
+          <div class = "col col-xs-2" id = "weather">
+            <span class="temp"></span>
+          <div class = "col col-xs-1"></div>
+            <div><span class="icon"></span></div>
           </div>
         </div>
-        <div class = "row">
-            <div class = "col col-xs-3"></div>
-            <div class = "col col-xs-6">
-              <span class="day"></span></div>
-            <div class = "col col-xs-3" id="weather">
-              <span class="city"></span></div>
-            </div>
-
+        <div class = "row" >
+          <div class = "col col-xs-3"></div>
+          <div class = "col col-xs-6"><span class = "day"></span></div>
+          <div class = "col col-xs-2"><span class = "city"></span></div>
+          <div class = "col col-xs-1"></div>
         </div>
-      </div>
-  <div id="bottom">
-      <span id="quote"/>
+      </div>    
+</header>
+
+<div class = "redirect">
+  <div class = "container">
+    <!---<div class = "center">-->
+    <div class = "row" >
+      <div class="col col-xs-2"></div>
+      <div class = "col col-xs-2"><a style="text-decoration: none;" href="https://www.facebook.com"><div class = "box center"><h1>Facebook</h1></div></a></div>
+      <div class="col col-xs-1"></div>
+      <div class = "col col-xs-2"><a style="text-decoration: none;" href="https://www.google.ee"><div class = "box center"><h1>Google</h1></div></a></div>
+      <div class="col col-xs-1"></div>
+      <div class = "col col-xs-2"><a style="text-decoration: none;" href="https://www.youtube.com"><div class = "box center"><h1>Youtube</h1></div></a></div>
+      <div class="col col-xs-2"></div>
+    </div>
+    <div class = "row" >
+      <div class="col col-xs-2"></div>
+      <div class = "col col-xs-2"><a style="text-decoration: none;" href="https://login.friendly-finance.eu/users"><div class = "box center"><h1>Easylender</h1></div></a></div>
+      <div class="col col-xs-1"></div>
+      <div class = "col col-xs-2"><a style="text-decoration: none;" href="https://friendlyfinance.atlassian.net/secure/Dashboard.jspa"><div class = "box center"><h1>Jira</h1></div></a></div>
+      <div class="col col-xs-1"></div>
+      <div class = "col col-xs-2"><a style="text-decoration: none;" href="https://grafana.wisemedia.ee/dashboard/db/application-background-jobs?refresh=30s&orgId=3"><div class = "box center"><h1>Grafana</h1></div></a></div>
+      <div class="col col-xs-2"></div>
+    </div>
+    <div class = "row" >
+      <div class="col col-xs-2"></div>
+      <div class = "col col-xs-2"><div class = "box "><h1>Dicky link 7</h1></div></div>
+      <div class="col col-xs-1"></div>
+      <div class = "col col-xs-2"><div class = " center"><h1>shitty link 8</h1></div></div>
+      <div class="col col-xs-1"></div>
+      <div class = "col col-xs-2"><div class = "box center"><h1>Last is past 9</h1></div></div>
+      <div class="col col-xs-2"></div>
+    </div>
+    <!---</div>-->
   </div>
+</div>
 
-<script src="assets/js/weather.js"></script>
-<script src="assets/js/time.js"></script>
-<script src="assets/js/background.js"></script>
-<script src="assets/js/quote.js"></script>
-
-  </body>
+  <div id="bottom">
+    <div><span class="quote_a"></span></div>
+    <span id="quote"/>
+  </div>
+  
+  <script src="assets/js/weather.js"></script>
+  <script src="assets/js/time.js"></script>
+  <script src="assets/js/quote.js"></script>
+  <script src="assets/js/preload.js"></script>
+  <!--
+    <script src="assets/js/background.js"></script>-->
+  </div>
+</body>
 </html>
