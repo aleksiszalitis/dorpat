@@ -16,3 +16,8 @@ header::before {
 	transition: .4s ease-in-out;
 }
 ```
+
+Read up on SASS (css templating language)
+Read up on npm templating languages, e.g. Express
+Read up on ES6 or typescript
+Commit please
